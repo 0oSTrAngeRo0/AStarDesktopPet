@@ -1,0 +1,12 @@
+{
+  "name": "com.sator-imaging.app-window-utility",
+  "displayName": "App Window Utility",
+  "version": "1.0.0",
+  "unity": "2018.3",
+  "description": "Utility for configuring application window style. With this utility, you can make application window transparent, frameless and more.\n\nCopyright (c) 2021 Sator Imaging, all rights reserved.",
+  "author": {
+    "name": "Sator Imaging",
+    "url": "https://www.sator-imaging.com/"
+  },
+  "_fingerprint": "92110b8c9515c3ec9056c924c113e1721b9a5bbc"
+}

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace AStar.TransparentWindow
+namespace Game
 {
     public class SceneScript : MonoBehaviour
     {
