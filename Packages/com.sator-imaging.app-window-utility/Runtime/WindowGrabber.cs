@@ -20,6 +20,7 @@ namespace SatorImaging.AppWindowUtility
 
         private bool isDragging = false;
         Vector2 targetPosition = Vector2.zero;
+        public float MoveSpeed;
 
 
         void Update()
@@ -53,8 +54,8 @@ namespace SatorImaging.AppWindowUtility
                 // and moving window while mouse dragging changes coordinate sample by sample.
                 // just remove the gap between current mouse position and drag starting position.
                 AppWindowUtility.MoveWindowRelative(
-                    (int)(Event.current.mousePosition.x - targetPosition.x),
-                    (int)(Event.current.mousePosition.y - targetPosition.y)
+                    (int)((Event.current.mousePosition.x - targetPosition.x) * MoveSpeed),
+                    (int)((Event.current.mousePosition.y - targetPosition.y) * MoveSpeed)
                 );
 
             }
