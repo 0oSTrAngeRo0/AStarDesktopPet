@@ -7,7 +7,7 @@ namespace AStar.TransparentWindow
     {
         private void Awake()
         {
-#if !UNITY_EDITOR && UNITY_STANDALONE_WIN
+// #if !UNITY_EDITOR && UNITY_STANDALONE_WIN
             IntPtr hWnd = Native.GetActiveWindow();
             Native.MARGINS margins = new Native.MARGINS
             {
@@ -16,8 +16,10 @@ namespace AStar.TransparentWindow
                 cyTopHeight = 0,
                 cyBottomHeight = 0
             };
-            Native.DwmExtendFrameIntoClientArea(hWnd, ref margins);
-#endif
+            Native.DwmExtendFrameIntoClientArea(hWnd, ref margins); 
+            var style = (uint)(Native.EWSEX.WS_EX_LAYERED | Native.EWSEX.WS_EX_TRANSPARENT);
+            Native.SetWindowLong(hWnd, (int)Native.EGWL.GWL_EXSTYLE, style);
+// #endif
         }
     }
 }
